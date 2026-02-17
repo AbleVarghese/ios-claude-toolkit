@@ -16,7 +16,7 @@ Verify: `ls .claude/skills/` should show 21 directories.
 Copy the template into your project root and fill in 5 values:
 
 ```bash
-cp /path/to/ios-claude-toolkit/CLAUDE.md.template CLAUDE.md
+cp /path/to/ios-claude-toolkit/templates/CLAUDE.md.template CLAUDE.md
 ```
 
 Open `CLAUDE.md` and replace:

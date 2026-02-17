@@ -99,7 +99,7 @@ Common secrets required for iOS CI/CD pipelines:
 | `APP_STORE_CONNECT_API_KEY` | App Store API authentication |
 | `MATCH_PASSWORD` | Code signing certificate encryption |
 | `FASTLANE_APPLE_ID` | Apple Developer account |
-| `{SERVICE}_TEST_KEY` | Third-party service test keys (e.g., Stripe, Airwallex) |
+| `{SERVICE}_TEST_KEY` | Third-party service test keys (e.g., Stripe, Twilio, RevenueCat) |
 
 > **Note:** Add secrets for each third-party service your project integrates with. Use the naming convention `{SERVICE_NAME}_TEST_KEY` / `{SERVICE_NAME}_LIVE_KEY` for consistency.
 

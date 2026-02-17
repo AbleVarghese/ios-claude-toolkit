@@ -1,5 +1,5 @@
 ---
-name: differential-review
+name: trailofbits-differential-review
 description: "This skill should be used when the user asks to 'security review a PR', 'differential review', 'review code changes for security', 'check for security regressions', 'blast radius analysis', or mentions security-focused code review. Provides adaptive security-focused differential review of PRs, commits, and diffs with blast radius calculation, test coverage checks, and adversarial analysis."
 user-invocable: true
 allowed-tools:

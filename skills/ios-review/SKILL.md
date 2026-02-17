@@ -2,7 +2,10 @@
 name: ios-review
 description: "This skill should be used when the user asks to 'review iOS code', 'check architecture compliance', 'audit SwiftUI patterns', 'run a code quality audit', or 'review performance'. Provides comprehensive iOS-specific code review with security, architecture, and quality focus."
 user-invocable: true
-allowed-tools: Read, Grep, Glob
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
 ---
 
 # iOS Code Review
