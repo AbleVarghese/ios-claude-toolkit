@@ -91,7 +91,7 @@ Built from 75+ sessions of production iOS development. Every skill encodes real 
 
 | Skill | What It Does |
 |-------|-------------|
-| **documentation** | SSOT documentation maintenance. Session protocols, CHANGELOG authoring, STATUS/BACKLOG updates, architecture decision records, DocC comment generation. |
+| **documentation** | Documentation maintenance with single-source-of-truth enforcement. Session protocols, CHANGELOG authoring, status updates, architecture decision records, DocC comment generation. |
 
 ### Orchestration
 
@@ -195,11 +195,11 @@ ios-claude-toolkit/
     ios-review/              # Code review
     heimdall-git/            # Git conventions
     cipher-security/         # OWASP security
-    trailofbits-review/      # PR security review
+    trailofbits-differential-review/  # PR security review
     hermes-stripe/           # Stripe workflows
     stripe-best-practices/   # Stripe patterns
     atlas-database/          # Supabase/Postgres
-    supabase-best-practices/ # DB optimization
+    supabase-postgres-best-practices/ # DB optimization
     prometheus-performance/  # Instruments profiling
     athena-accessibility/    # WCAG compliance
     babel-localization/      # Multi-locale

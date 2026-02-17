@@ -1,4 +1,4 @@
-# iOS Claude Toolkit
+# iOS Claude Code Toolkit
 
 **21 battle-tested Claude Code skills for iOS development -- built across 75 real production sessions.**
 
@@ -12,56 +12,71 @@ The iOS Claude Code Toolkit is a drop-in skills library that turns Claude Code i
 
 ## What's Inside
 
-### 21 skills across 7 categories:
+### 21 skills across 10 categories:
 
-**Development (4 skills)**
-Build, test, lint, and deploy iOS projects with zero manual configuration. Auto-discovers your project structure, schemes, and simulators. Handles XcodeGen, SPM, CocoaPods, and raw xcodeproj setups.
+**Development & Code Quality (2 skills)**
+Build, test, and review iOS projects with architecture guardrails and TDD enforcement.
 
-- `forge-development` -- Full iOS build orchestration (clean builds, incremental builds, simulator management, scheme detection)
-- `guardian-testing` -- Smart test selection that maps changed files to test classes, runs the smallest sufficient scope, and reports failures with context
-- `phoenix-deployment` -- App Store submission pipeline (archive, export, upload, TestFlight distribution, release notes)
-- `pipeline-cicd` -- CI/CD pipeline configuration with quality gates and automated validation
+- `forge-development` -- TDD-first development with RED-GREEN-REFACTOR enforcement, hexagonal architecture guardrails, protocol-based DI patterns, Swift concurrency best practices
+- `ios-review` -- Structured code review against 40+ iOS-specific criteria: memory leaks, retain cycles, main-thread violations, API misuse, accessibility gaps
 
-**Security (3 skills)**
-Audit your app against OWASP Mobile Top 10, scan for leaked secrets, validate compliance posture, and run differential security reviews on every PR.
+**Security & Compliance (2 skills)**
+Audit your app against OWASP Mobile Top 10 and run security-focused differential reviews on every PR.
 
-- `cipher-security` -- OWASP Mobile Top 10 audit with severity classification and remediation guidance
-- `trailofbits-differential-review` -- Differential security review on every PR with vulnerability pattern detection
-- `trailofbits-differential-review` -- Security-focused PR review modeled on Trail of Bits methodology
+- `cipher-security` -- OWASP Mobile Top 10 scanning, keychain audit, jailbreak detection review, SSL pinning validation, biometric auth verification, financial compliance checks
+- `trailofbits-differential-review` -- Security-focused PR review modeled on Trail of Bits methodology with vulnerability pattern detection and injection vector analysis
 
 **Payments (2 skills)**
-Stripe CLI workflows, webhook forwarding, test card numbers, subscription lifecycle testing, Connect account management, and Identity verification flows.
+Stripe CLI workflows, webhook forwarding, test card numbers, subscription lifecycle, Connect accounts, and Identity verification flows.
 
 - `hermes-stripe` -- End-to-end Stripe integration (PaymentSheet, Connect onboarding, Identity KYC, webhook handling, test mode workflows)
-- `stripe-best-practices` -- Stripe-specific patterns (idempotency keys, error handling, metadata conventions, migration strategies)
+- `stripe-best-practices` -- Stripe-specific patterns (idempotency keys, payment intent lifecycle, SCA/3DS handling, metadata conventions, error code resolution)
 
 **Database (2 skills)**
-Schema design, migration safety, query optimization, Row Level Security policy validation, and edge function development for Supabase PostgreSQL.
+Schema design, migration safety, query optimization, Row Level Security policies, and edge function patterns for Supabase PostgreSQL.
 
-- `atlas-database` -- Schema design, migration generation, RLS policy authoring, index optimization, and data integrity checks
-- `supabase-postgres-best-practices` -- Supabase-specific patterns (edge functions, realtime subscriptions, storage policies, auth hooks)
+- `atlas-database` -- Migration authoring, RLS policy design, index optimization, schema evolution with backward compatibility and rollback scripts
+- `supabase-postgres-best-practices` -- Query optimization, connection pooling, edge function patterns, realtime subscriptions, storage policies, PostgREST filter syntax
 
-**API & Networking (2 skills)**
-REST and GraphQL integration, retry logic, offline support, certificate pinning, and request/response logging.
+**DevOps & Deployment (3 skills)**
+CI/CD pipelines, Fastlane automation, and App Store submission from archive to review.
 
-- `apollo-api` -- API contract design, endpoint documentation, versioning strategy, and integration testing
-- `loki-logs` -- Structured logging, crash reporting integration (Sentry), and production debugging workflows
+- `velocity-fastlane` -- Fastlane lane authoring, match code signing, TestFlight distribution, screenshot automation, build number management
+- `pipeline-cicd` -- GitHub Actions for Xcode: build matrices, test parallelization, artifact caching, simulator management, release automation
+- `cupertino-apple` -- App Store submission checklist, Human Interface Guidelines validation, privacy nutrition labels, App Review guideline pre-check
 
-**Testing & Quality (5 skills)**
-TDD methodology, UI testing, snapshot testing, performance profiling, and code review automation.
+**Monitoring & Debugging (3 skills)**
+Device logs, crash investigation, and Sentry-aware code review that cross-references changes against known crash sites.
 
-- `superpowers:test-driven-development` -- RED-GREEN-REFACTOR workflow with test-first enforcement
-- `superpowers:verification-before-completion` -- Quality gate enforcement before marking any task complete
-- `superpowers:systematic-debugging` -- Root cause analysis methodology (bisect, isolate, reproduce, fix, verify)
-- `superpowers:requesting-code-review` -- Structured code review requests with context, diff summary, and risk assessment
-- `ios-review` -- iOS-specific code review (memory management, concurrency, accessibility, App Store guidelines)
+- `loki-logs` -- Device log streaming, Console.app filtering, OSLog structured logging, crash log symbolication
+- `sentry-code-review` -- Sentry-aware PR review that cross-references changes against open issues and verifies error handling covers known crash sites
+- `sentry-find-bugs` -- Sentry issue investigation: reads stack traces, identifies root causes, suggests fixes, verifies against historical crash patterns
 
-**Git & Workflow (3 skills)**
-Conventional commits, branch management, PR creation, conflict resolution, and changelog generation.
+**Performance (1 skill)**
+Instruments profiling workflows for memory, CPU, scroll performance, and app launch optimization.
 
-- `heimdall-git` -- Git workflow automation (smart commits, branch strategy, merge conflict resolution, changelog updates)
-- `commit-commands:commit` -- One-word commit workflow (analyzes diff, generates conventional commit message, stages, commits)
-- `commit-commands:commit-push-pr` -- Full pipeline from local changes to open pull request in one command
+- `prometheus-performance` -- Time Profiler, Allocations, Leaks, Network profiling. Memory budget enforcement, CPU spike analysis, scroll performance diagnostics
+
+**Accessibility (1 skill)**
+WCAG 2.1 AA compliance for iOS with VoiceOver audit and Dynamic Type validation.
+
+- `athena-accessibility` -- VoiceOver audit, Dynamic Type scaling, color contrast validation, accessibility label/hint authoring, trait assignment, rotor support
+
+**Localization (1 skill)**
+Multi-locale string management with pluralization, currency formatting, and RTL layout support.
+
+- `babel-localization` -- `.xcstrings` catalog workflows, pluralization rules, currency/date/number formatting by region, RTL layout support, locale-specific testing
+
+**Notifications & Orchestration (2 skills)**
+Push notification setup and multi-agent coordination for complex tasks.
+
+- `aegis-notifications` -- APNs configuration, push certificate management, local notification scheduling, content extensions, rich media payloads
+- `maestro-orchestrator` -- Multi-agent coordination for large tasks: decomposes work into parallel assignments, manages dependencies, aggregates results
+
+**Documentation (1 skill)**
+Single source of truth documentation maintenance with automated updates.
+
+- `documentation` -- Session protocols, CHANGELOG authoring, STATUS/BACKLOG updates, architecture decision records, DocC comment generation
 
 ---
 
@@ -133,23 +148,17 @@ Yes. Claude Code runs inside Cursor as the default AI assistant. Skills are disc
 Yes. They're plain markdown files. Add your own patterns, remove sections you don't need, or use them as templates to build entirely new skills. You own the files.
 
 **Will these skills become outdated?**
-The patterns are based on stable iOS development practices (SwiftUI, async/await, SPM, XCTest) and Claude Code's skill format. Both evolve slowly. If a major breaking change happens, updates will be available to existing customers.
+The patterns are based on stable iOS development practices (SwiftUI, async/await, SPM, XCTest) and Claude Code's skill format. Both evolve slowly. If a major breaking change happens, updates will be available to existing customers within 12 months of purchase.
 
 **Is this a subscription?**
-No. One-time purchase. You own the files forever. Download, customize, and use on as many projects as you want.
+No. One-time purchase. You own the files forever. Free updates for 12 months from purchase date.
 
 **What if it doesn't work for my project?**
-The skills use automatic project discovery, so they adapt to your setup. If something doesn't fit, the markdown files are easy to modify. And if you're genuinely unhappy, Gumroad offers a 30-day refund policy.
+The skills use automatic project discovery, so they adapt to your setup. If something doesn't fit, the markdown files are easy to modify. And if you're genuinely unhappy, there's a 30-day refund policy.
 
 **Do I need to use all 21 skills?**
-No. Use what you need. Each skill is independent. Most developers start with `forge-development` (builds), `guardian-testing` (tests), and `heimdall-git` (commits), then expand from there.
+No. Use what you need. Each skill is independent. Most developers start with `forge-development` (builds), `ios-review` (code review), and `heimdall-git` (commits), then expand from there.
 
 ---
 
-## What Developers Are Saying
-
-*This section will be updated with testimonials after launch.*
-
----
-
-**iOS Claude Toolkit** -- Stop teaching Claude about iOS every session. Start shipping.
+**iOS Claude Code Toolkit** -- Stop teaching Claude about iOS every session. Start shipping.
