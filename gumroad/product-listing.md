@@ -1,164 +1,155 @@
-# iOS Claude Code Toolkit
+# iOS Claude Toolkit
 
-**21 battle-tested Claude Code skills for iOS development -- built across 75 real production sessions.**
+**Stop re-teaching Claude about iOS every session. Start shipping.**
 
----
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-You're using Claude Code for iOS development, but it doesn't know your stack. It doesn't know SwiftUI patterns, Xcode build commands, Stripe integration, or App Store submission requirements. Until now.
+You're using Claude Code for iOS development. It's powerful -- until you realize it forgot your architecture rules. *Again.*
 
-The iOS Claude Code Toolkit is a drop-in skills library that turns Claude Code into a senior iOS engineer. Every skill was built and refined across 75+ real development sessions shipping a production iOS app -- not in a weekend hackathon.
+Every new session, you re-explain:
 
----
+- Your project structure and build commands
+- SwiftUI patterns and concurrency conventions
+- How you handle Stripe payments
+- Your test strategy and code review standards
+- Security requirements and App Store submission rules
 
-## What's Inside
+**You're spending more time correcting the AI than writing code.**
 
-### 21 skills across 10 categories:
+The iOS Claude Toolkit fixes this permanently.
 
-**Development & Code Quality (2 skills)**
-Build, test, and review iOS projects with architecture guardrails and TDD enforcement.
+21 production-tested skills that drop into your .claude/skills/ folder and activate automatically. No configuration. No prompts to memorize. Claude just *knows* your iOS workflow.
 
-- `forge-development` -- TDD-first development with RED-GREEN-REFACTOR enforcement, hexagonal architecture guardrails, protocol-based DI patterns, Swift concurrency best practices
-- `ios-review` -- Structured code review against 40+ iOS-specific criteria: memory leaks, retain cycles, main-thread violations, API misuse, accessibility gaps
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-**Security & Compliance (2 skills)**
-Audit your app against OWASP Mobile Top 10 and run security-focused differential reviews on every PR.
+## How It Works
 
-- `cipher-security` -- OWASP Mobile Top 10 scanning, keychain audit, jailbreak detection review, SSL pinning validation, biometric auth verification, financial compliance checks
-- `trailofbits-differential-review` -- Security-focused PR review modeled on Trail of Bits methodology with vulnerability pattern detection and injection vector analysis
+1. Unzip and copy the skills/ folder into .claude/skills/
+2. Start a Claude Code session
+3. **That's it.** Skills activate when Claude detects relevant work.
 
-**Payments (2 skills)**
-Stripe CLI workflows, webhook forwarding, test card numbers, subscription lifecycle, Connect accounts, and Identity verification flows.
+Say **"add Stripe checkout"** -- Claude follows production SOPs with idempotency keys, 3DS handling, and webhook setup.
 
-- `hermes-stripe` -- End-to-end Stripe integration (PaymentSheet, Connect onboarding, Identity KYC, webhook handling, test mode workflows)
-- `stripe-best-practices` -- Stripe-specific patterns (idempotency keys, payment intent lifecycle, SCA/3DS handling, metadata conventions, error code resolution)
+Say **"review this PR"** -- 40+ iOS-specific quality checks run automatically.
 
-**Database (2 skills)**
-Schema design, migration safety, query optimization, Row Level Security policies, and edge function patterns for Supabase PostgreSQL.
+Say **"commit this"** -- TDD verification, security scan, and conventional commits. Every time.
 
-- `atlas-database` -- Migration authoring, RLS policy design, index optimization, schema evolution with backward compatibility and rollback scripts
-- `supabase-postgres-best-practices` -- Query optimization, connection pooling, edge function patterns, realtime subscriptions, storage policies, PostgREST filter syntax
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-**DevOps & Deployment (3 skills)**
-CI/CD pipelines, Fastlane automation, and App Store submission from archive to review.
+## What's Inside -- 21 Skills Across 10 Categories
 
-- `velocity-fastlane` -- Fastlane lane authoring, match code signing, TestFlight distribution, screenshot automation, build number management
-- `pipeline-cicd` -- GitHub Actions for Xcode: build matrices, test parallelization, artifact caching, simulator management, release automation
-- `cupertino-apple` -- App Store submission checklist, Human Interface Guidelines validation, privacy nutrition labels, App Review guideline pre-check
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-**Monitoring & Debugging (3 skills)**
-Device logs, crash investigation, and Sentry-aware code review that cross-references changes against known crash sites.
+### Development & Code Quality
 
-- `loki-logs` -- Device log streaming, Console.app filtering, OSLog structured logging, crash log symbolication
-- `sentry-code-review` -- Sentry-aware PR review that cross-references changes against open issues and verifies error handling covers known crash sites
-- `sentry-find-bugs` -- Sentry issue investigation: reads stack traces, identifies root causes, suggests fixes, verifies against historical crash patterns
+TDD enforcement with RED-GREEN-REFACTOR cycles. Architecture guardrails. 40+ iOS-specific code review criteria covering memory leaks, retain cycles, main-thread violations, and accessibility gaps.
 
-**Performance (1 skill)**
-Instruments profiling workflows for memory, CPU, scroll performance, and app launch optimization.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-- `prometheus-performance` -- Time Profiler, Allocations, Leaks, Network profiling. Memory budget enforcement, CPU spike analysis, scroll performance diagnostics
+### Security & Compliance
 
-**Accessibility (1 skill)**
-WCAG 2.1 AA compliance for iOS with VoiceOver audit and Dynamic Type validation.
+OWASP Mobile Top 10 scanning. Keychain audit. SSL pinning validation. Security-focused PR review modeled on Trail of Bits methodology with vulnerability pattern detection.
 
-- `athena-accessibility` -- VoiceOver audit, Dynamic Type scaling, color contrast validation, accessibility label/hint authoring, trait assignment, rotor support
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-**Localization (1 skill)**
-Multi-locale string management with pluralization, currency formatting, and RTL layout support.
+### Payments
 
-- `babel-localization` -- `.xcstrings` catalog workflows, pluralization rules, currency/date/number formatting by region, RTL layout support, locale-specific testing
+End-to-end Stripe integration -- PaymentSheet, Connect onboarding, Identity KYC, webhook handling, test mode workflows. Idempotency keys, SCA/3DS handling, and error code resolution built in.
 
-**Notifications & Orchestration (2 skills)**
-Push notification setup and multi-agent coordination for complex tasks.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-- `aegis-notifications` -- APNs configuration, push certificate management, local notification scheduling, content extensions, rich media payloads
-- `maestro-orchestrator` -- Multi-agent coordination for large tasks: decomposes work into parallel assignments, manages dependencies, aggregates results
+### Database
 
-**Documentation (1 skill)**
-Single source of truth documentation maintenance with automated updates.
+Supabase PostgreSQL migrations, Row Level Security policies, query optimization, edge function patterns, realtime subscriptions, and rollback scripts.
 
-- `documentation` -- Session protocols, CHANGELOG authoring, STATUS/BACKLOG updates, architecture decision records, DocC comment generation
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
----
+### DevOps & Deployment
 
-## What You Also Get
+GitHub Actions CI/CD for Xcode. Fastlane automation with match code signing. App Store submission checklist with Human Interface Guidelines validation and App Review pre-check.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+### Monitoring & Debugging
+
+Device log streaming and crash log symbolication. Sentry-aware code review that cross-references your changes against known crash sites and open issues.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+### Performance
+
+Instruments profiling workflows -- Time Profiler, Allocations, Leaks, Network. Memory budget enforcement, CPU spike analysis, scroll performance diagnostics, and launch time optimization.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+### Accessibility
+
+WCAG 2.1 AA compliance for iOS. VoiceOver audit, Dynamic Type scaling, color contrast validation, accessibility label authoring, and rotor support.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+### Localization
+
+Multi-locale string management with .xcstrings catalogs. Pluralization rules, currency and date formatting by region, RTL layout support, and locale-specific testing.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+### Orchestration & Notifications
+
+APNs configuration and push certificate management. Multi-agent coordination for large tasks -- decomposes work into parallel assignments, manages dependencies, and aggregates results.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## Also Included
 
 **CLAUDE.md Template**
-A starter project configuration file for Claude Code. Drop it in your repo root and Claude immediately understands your project structure, build commands, architecture, test strategy, and coding standards. Based on the same template used across 75 production sessions.
+Drop-in project config so Claude understands your repo instantly -- project structure, build commands, architecture, test strategy, and coding standards.
 
 **Git Hooks**
-Pre-commit hooks for secrets scanning (prevents API keys from reaching your repo) and commit message validation (enforces conventional commit format). One setup script installs both.
+Pre-commit secrets scanning (prevents API keys from reaching your repo) and conventional commit enforcement. One setup script installs both.
 
 **Workflow Tips Guide**
-Hard-won lessons from 75 production sessions. Covers: how to structure prompts for iOS work, when to use plan mode vs. direct execution, how to handle Xcode build failures, simulator management tricks, and patterns for multi-file refactoring.
+Hard-won lessons from 75+ production sessions -- prompt structuring, plan mode vs. direct execution, Xcode build failure recovery, simulator management, and multi-file refactoring patterns.
 
 **Quick-Start Guide**
-From download to fully configured in 5 minutes. Step-by-step instructions with verification at each stage.
+From download to fully configured in 5 minutes. Step-by-step with verification at each stage.
 
----
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## Who This Is For
 
-**iOS developers using Claude Code (CLI or Cursor IDE)**
-You're already using Claude Code but spending time re-explaining iOS patterns every session. These skills eliminate that overhead permanently.
+**iOS developers using Claude Code** (CLI or Cursor IDE) who are tired of re-explaining iOS patterns every session. These skills eliminate that overhead permanently.
 
-**Teams adopting Claude Code for iOS projects**
-Standardize how your team uses Claude Code. Every developer gets the same high-quality iOS workflows without building tribal knowledge from scratch.
+**Teams adopting Claude Code** who want to standardize AI-assisted iOS workflows across every developer -- without building tribal knowledge from scratch.
 
-**Solo founders building with AI-assisted development**
-You're building fast and can't afford to debug Claude's iOS blind spots. These skills encode production-grade patterns so you ship faster with fewer surprises.
+**Solo founders building fast** who can't afford to debug Claude's iOS blind spots. Ship faster with fewer surprises.
 
----
+Works with **any iOS project** -- SwiftUI, UIKit, or hybrid.
 
-## What Makes This Different
-
-**Not theoretical.**
-Every skill was built and battle-tested across 75+ real development sessions shipping a production iOS app. The patterns survived real Xcode failures, real App Store reviews, real concurrency bugs, and real payment integration edge cases.
-
-**Progressive disclosure.**
-Each skill has a lean SKILL.md file (what Claude reads first) and a detailed references/ directory (what Claude consults when it needs depth). Claude gets context without getting overwhelmed.
-
-**Project-agnostic.**
-These skills work on any iOS project. They use automatic discovery -- detecting your project structure, build system, test targets, and dependencies at runtime. No hardcoded paths or assumptions.
-
-**Methodology, not just files.**
-You're not just getting skill definitions. You're getting the workflow methodology behind them -- how to structure sessions, when to use which skill, how to chain skills together for complex tasks, and the testing strategies that keep your codebase stable.
-
----
-
-## Setup
-
-```
-Copy the skills/ folder into your project's .claude/skills/ directory.
-Claude discovers them automatically. That's it.
-```
-
-Detailed instructions are in the included quick-start guide, but the short version is: unzip, copy one folder, start a Claude Code session. Skills are plain markdown files -- no compilation, no dependencies, no configuration servers.
-
----
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## FAQ
 
 **Do I need a specific Claude plan?**
-Any plan that includes Claude Code. The skills are plain markdown files that Claude reads as context -- no API calls, no external services.
+Any plan that includes Claude Code. Skills are plain markdown files -- no API calls, no external services.
 
-**Does this work with Cursor?**
-Yes. Claude Code runs inside Cursor as the default AI assistant. Skills are discovered the same way whether you use the standalone CLI or Cursor's integrated terminal.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 **Can I modify the skills?**
-Yes. They're plain markdown files. Add your own patterns, remove sections you don't need, or use them as templates to build entirely new skills. You own the files.
+Yes. They're plain markdown. Add your own patterns, remove what you don't need, or build entirely new skills from the templates.
 
-**Will these skills become outdated?**
-The patterns are based on stable iOS development practices (SwiftUI, async/await, SPM, XCTest) and Claude Code's skill format. Both evolve slowly. If a major breaking change happens, updates will be available to existing customers within 12 months of purchase.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 **Is this a subscription?**
-No. One-time purchase. You own the files forever. Free updates for 12 months from purchase date.
+No. One-time purchase. You own the files forever. Free updates for 12 months.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 **What if it doesn't work for my project?**
-The skills use automatic project discovery, so they adapt to your setup. If something doesn't fit, the markdown files are easy to modify. And if you're genuinely unhappy, there's a 30-day refund policy.
+Skills use automatic project discovery and adapt to your setup. The markdown files are easy to customize. 30-day money-back guarantee if you're not happy.
 
-**Do I need to use all 21 skills?**
-No. Use what you need. Each skill is independent. Most developers start with `forge-development` (builds), `ios-review` (code review), and `heimdall-git` (commits), then expand from there.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
----
+*Built from 75+ real production sessions. Every skill battle-tested against real Xcode failures, real App Store reviews, real concurrency bugs, and real payment edge cases.*
 
-**iOS Claude Code Toolkit** -- Stop teaching Claude about iOS every session. Start shipping.
+**iOS Claude Toolkit -- Stop teaching. Start shipping.**
