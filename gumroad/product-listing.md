@@ -18,7 +18,7 @@ Every new session, you re-explain:
 
 The iOS Claude Toolkit fixes this permanently.
 
-21 production-tested skills that drop into your .claude/skills/ folder and activate automatically. No configuration. No prompts to memorize. Claude just *knows* your iOS workflow.
+22 production-tested skills that drop into your .claude/skills/ folder and activate automatically. No configuration. No prompts to memorize. Claude just *knows* your iOS workflow.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -36,7 +36,7 @@ Say **"commit this"** -- TDD verification, security scan, and conventional commi
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-## What's Inside -- 21 Skills Across 10 Categories
+## What's Inside -- 22 Skills Across 11 Categories
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -97,6 +97,12 @@ Multi-locale string management with .xcstrings catalogs. Pluralization rules, cu
 ### Orchestration & Notifications
 
 APNs configuration and push certificate management. Multi-agent coordination for large tasks -- decomposes work into parallel assignments, manages dependencies, and aggregates results.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+### Decision Intelligence (/solve) — NEW
+
+The decision framework that scored 9.6/10 against McKinsey's MECE (7.0), Toyota's A3 (7.5), and Amazon's Working Backwards (6.5). Synthesizes 13 world-class methodologies -- Boyd, Cynefin, Munger, Taleb, Tetlock, Kahneman, and more -- into one adaptive 10-step process. Includes a Completeness Gate checklist, weighted decision matrix, 8-bias cognitive debiasing protocol, pre-mortem + red team analysis, confidence-calibrated decision journal, and antifragility scoring. Adapts to problem size: 5-minute satisficing for simple calls, full 10-step treatment for complex decisions, crisis mode for urgent situations. Works for architecture decisions, build-vs-buy, hiring, roadmap prioritization, and any high-stakes choice.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
