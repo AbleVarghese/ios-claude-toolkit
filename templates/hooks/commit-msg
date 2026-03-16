@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+#
+# commit-msg hook — enforces conventional commit format
+#
+# Format: type(scope): subject  OR  type: subject
+# Valid types: feat, fix, docs, style, refactor, perf, test, chore, ci, build
+# Rules:
+#   - Subject must start with lowercase letter
+#   - No period at end of subject line
+#   - Subject line max 72 characters
+#
+# Install:
+#   cp commit-msg .git/hooks/commit-msg && chmod +x .git/hooks/commit-msg
+
+COMMIT_MSG_FILE="$1"
+COMMIT_MSG=$(head -1 "$COMMIT_MSG_FILE")
+
+# Allow merge commits and fixup/squash commits
+if echo "$COMMIT_MSG" | grep -qE '^(Merge|Revert|fixup!|squash!) '; then
+    exit 0
+fi
+
+VALID_TYPES="feat|fix|docs|style|refactor|perf|test|chore|ci|build"
+PATTERN="^($VALID_TYPES)(\([a-zA-Z0-9_-]+\))?: [a-z].*[^.]$"
+
+if ! echo "$COMMIT_MSG" | grep -Eq "$PATTERN"; then
+    echo "ERROR: Commit message does not follow conventional commit format."
+    echo ""
+    echo "  Expected: type(scope): subject  OR  type: subject"
+    echo "  Types:    $VALID_TYPES"
+    echo "  Rules:    - subject starts with lowercase"
+    echo "            - no period at end"
+    echo "            - scope uses only [a-zA-Z0-9_-]"
+    echo ""
+    echo "  Examples: feat(auth): add biometric login"
+    echo "            fix: resolve crash on empty wallet"
+    echo ""
+    echo "  Got:      $COMMIT_MSG"
+    exit 1
+fi
+
+SUBJECT_LENGTH=${#COMMIT_MSG}
+if [ "$SUBJECT_LENGTH" -gt 72 ]; then
+    echo "ERROR: Subject line is $SUBJECT_LENGTH chars (max 72)."
+    echo "  Shorten: $COMMIT_MSG"
+    exit 1
+fi
+
+exit 0

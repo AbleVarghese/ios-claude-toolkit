@@ -1,0 +1,153 @@
+# CLAUDE.md
+
+## Project
+
+- **Name:** {PROJECT_NAME}
+- **Stack:** Swift {SWIFT_VERSION}, SwiftUI, iOS {MIN_IOS}+, {BACKEND}
+- **Architecture:** {ARCHITECTURE}
+- **Bundle ID:** {BUNDLE_ID}
+
+<!-- Customize: Replace all {PLACEHOLDER} values with your project specifics. -->
+<!-- Backend examples: Supabase, Firebase, Vapor, custom REST API -->
+<!-- Architecture examples: MVVM, Hexagonal + MVVM, TCA, VIPER, Clean Architecture -->
+
+## Build Commands
+
+```bash
+# Generate Xcode project (if using XcodeGen)
+cd {PROJECT_DIR} && xcodegen generate
+
+# Build
+xcodebuild -project {PROJECT}.xcodeproj -scheme {SCHEME} build \
+  -destination 'generic/platform=iOS Simulator'
+
+# Run all tests
+xcodebuild test -project {PROJECT}.xcodeproj -scheme {SCHEME} \
+  -destination 'platform=iOS Simulator,OS=latest,name=iPhone 16' \
+  -only-testing:{TEST_TARGET} \
+  SWIFT_USE_INTEGRATED_DRIVER=NO
+
+# Run a specific test class
+xcodebuild test -project {PROJECT}.xcodeproj -scheme {SCHEME} \
+  -destination 'platform=iOS Simulator,OS=latest,name=iPhone 16' \
+  -only-testing:{TEST_TARGET}/SomeClassTests \
+  SWIFT_USE_INTEGRATED_DRIVER=NO
+
+# Lint
+swiftlint lint --strict
+```
+
+<!-- Customize: If using SPM instead of xcodeproj, replace -project with -package-path. -->
+<!-- If using Fastlane, add your lane commands here (triggers the velocity-fastlane skill). -->
+
+## Architecture
+
+<!-- Customize: Describe your project's architecture layers and dependency flow. -->
+<!-- This section helps forge-development and ios-review enforce your patterns. -->
+
+```
+{PROJECT}/
+├── Domain/           # Pure business logic, no external dependencies
+├── Data/             # Repositories, networking, persistence
+├── Presentation/     # Views, ViewModels, UI components
+├── Infrastructure/   # DI container, app configuration
+└── Resources/        # Assets, localization, config files
+```
+
+**Dependency flow:** `View -> ViewModel -> Service/UseCase -> Repository/Port <- Adapter`
+
+<!-- Customize: Replace the tree above with your actual directory structure. -->
+<!-- Document which layers can import which. Domain should have zero external imports. -->
+
+## Code Rules
+
+- No force unwraps (`!`) in production code
+- `async/await` only (no completion handlers)
+- Protocol-based dependency injection (no `.shared` singletons)
+- ViewModels must be `@MainActor`
+- TDD: write tests BEFORE implementation (RED -> GREEN -> REFACTOR)
+- Strict concurrency enabled (`SWIFT_STRICT_CONCURRENCY: complete`)
+- Add DocC comments to all public APIs
+
+<!-- Customize: Add project-specific rules (line length, naming conventions, etc.). -->
+
+## Secrets
+
+Never commit secrets. Use xcconfig files or environment variables.
+
+```
+{SECRETS_CONFIG} (gitignored) -> Debug/Release.xcconfig -> Info.plist -> Bundle.main
+```
+
+<!-- Customize: Document your secrets chain. Common patterns: -->
+<!-- xcconfig: Secrets.xcconfig loaded via build settings -->
+<!-- .env: dotenv files loaded at runtime -->
+<!-- Keychain: KeychainAccess or Security framework for runtime secrets -->
+
+## Key Files
+
+<!-- Customize: List the most important files Claude should know about. -->
+
+| File | Purpose |
+|------|---------|
+| `{DI_CONTAINER_PATH}` | Dependency injection wiring |
+| `{APP_ENTRY_POINT}` | App entry point (e.g., {PROJECT}App.swift) |
+| `{PROJECT_CONFIG}` | Project configuration (project.yml / Package.swift) |
+
+## Testing Strategy
+
+**Smart test selection** -- never run the full suite unless explicitly asked.
+
+1. Identify changed files: `git diff --name-only` + `git status --porcelain`
+2. Map source files to test files (e.g., `UserService.swift` -> `UserServiceTests.swift`)
+3. Include tests for any modified protocols or mocks
+4. Run targeted: use multiple `-only-testing:{TEST_TARGET}/ClassName` flags
+
+| Scope | When | Est. Time |
+|-------|------|-----------|
+| Single class | One file changed, isolated | ~5 sec |
+| Related classes | Feature work, multiple files | ~30 sec |
+| Full unit tests | Major refactoring, DI changes | ~5 min |
+| All tests | Pre-release, CI, explicit request | varies |
+
+## Git Workflow
+
+When user expresses git intent, execute immediately:
+
+| User Says | Action |
+|-----------|--------|
+| "commit" | `git add -A` + commit with conventional message |
+| "push" | `git push origin {DEFAULT_BRANCH}` |
+| "save" | Stage + commit + push |
+
+Commit format: `type(scope): description` -- types: feat, fix, docs, test, refactor, chore
+
+<!-- Customize: Set {DEFAULT_BRANCH} to main, master, or develop as appropriate. -->
+
+## Skills Reference
+
+<!-- These 21 skills activate automatically based on context. No manual invocation needed. -->
+
+| Skill | Triggers When You Ask To... |
+|-------|-----------------------------|
+| **forge-development** | Implement a feature, refactor code, add a view/viewmodel, write Swift code |
+| **heimdall-git** | Commit, push, create a branch, resolve merge conflict, tag a release |
+| **ios-review** | Review iOS code, check architecture compliance, audit SwiftUI patterns |
+| **maestro-orchestrator** | Coordinate agents, run multi-step tasks, parallel execution |
+| **cipher-security** | Run a security scan, check vulnerabilities, audit OWASP/PCI/KYC/AML compliance |
+| **atlas-database** | Create a migration, design schema, add RLS policy, write a trigger function |
+| **prometheus-performance** | Profile performance, find memory leaks, optimize app launch time |
+| **loki-logs** | Stream device logs, search logs, debug trace, analyze console output |
+| **velocity-fastlane** | Fastlane lanes, TestFlight upload, App Store submission, code signing |
+| **pipeline-cicd** | CI/CD pipeline, GitHub Actions, deployment automation, quality gates |
+| **documentation** | Update STATUS/BACKLOG, session-end docs, changelog entry, SSOT maintenance |
+| **aegis-notifications** | Push notifications, APNs setup, local notifications, rich content |
+| **athena-accessibility** | Accessibility audit, VoiceOver, Dynamic Type, WCAG compliance |
+| **babel-localization** | Localize strings, add translations, format currency/dates, i18n |
+| **cupertino-apple** | App Store guidelines, Human Interface Guidelines, privacy requirements |
+| **hermes-stripe** | Test Stripe payments, forward webhooks, manage connected accounts |
+| **stripe-best-practices** | Integrate Stripe, PaymentSheet, webhook security, subscription billing |
+| **supabase-postgres-best-practices** | Optimize queries, design schema, add indexes, RLS policies, connection pooling |
+| **trailofbits-differential-review** | Security review a PR, blast radius analysis, check for security regressions |
+| **sentry-find-bugs** | Fix Sentry errors, debug production issues, investigate exceptions |
+| **sentry-code-review** | Review Sentry PR comments, address Sentry findings, resolve Sentry feedback |

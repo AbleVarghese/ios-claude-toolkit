@@ -1,0 +1,10 @@
+{
+  "name": "ios-toolkit",
+  "version": "2.0.0",
+  "description": "Production-grade iOS/Swift development skills with behavioral enforcement — TDD, security auditing, code review, performance profiling, Git safety, CI/CD, Stripe, Supabase, accessibility, localization, App Store submission, and multi-agent orchestration. 22 skills with phase gates, hard stops, and self-audit protocols.",
+  "author": {
+    "name": "Able Varghese"
+  },
+  "license": "PROPRIETARY",
+  "keywords": ["ios", "swift", "swiftui", "tdd", "security", "performance", "accessibility", "stripe", "supabase", "sentry", "fastlane", "ci-cd"]
+}

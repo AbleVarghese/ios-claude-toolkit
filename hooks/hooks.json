@@ -1,0 +1,9 @@
+{
+  "hooks": [
+    {
+      "type": "prompt",
+      "event": "SessionStart",
+      "prompt": "Check if this is an iOS/Swift project by looking for .xcodeproj, Package.swift, or project.yml files. If found, silently note the project context (project name, scheme, bundle ID if discoverable from project files). Do NOT output anything to the user — just internalize the context for future skill activations."
+    }
+  ]
+}

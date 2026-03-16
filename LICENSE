@@ -1,0 +1,67 @@
+iOS Claude Code Toolkit — Proprietary License
+
+Copyright (c) 2025-2026 Able Varghese (Family: Tharayil)
+Toronto, Ontario, Canada
+All rights reserved.
+
+TERMS OF USE
+
+1. GRANT OF LICENSE
+   This product is licensed, not sold. The original purchaser ("Licensee")
+   is granted a non-exclusive, non-transferable, personal license to use
+   the contents of this product ("the Toolkit") solely as a development
+   tool or artifact within Claude Code (Anthropic's CLI for Claude) based
+   development workflows.
+
+2. PERMITTED USES
+   - Use the Toolkit solely as a development tool or artifact within
+     Claude Code (Anthropic's CLI for Claude) based development workflows
+   - Modify skill files to suit project-specific needs within Claude Code
+   - Include modified skill files in private repositories for use with
+     Claude Code
+
+3. RESTRICTIONS
+   The Licensee may NOT:
+   - Use the Toolkit for any purpose other than Claude Code based
+     software development
+   - Redistribute, share, or make the Toolkit available to others
+   - Resell, sublicense, or include the Toolkit in other products for sale
+   - Publish the Toolkit contents publicly (e.g., public GitHub repos, blogs)
+   - Remove or alter this copyright notice from any files
+   - Claim authorship of the original Toolkit content
+   - Use the Toolkit to create a competing product or development tool
+   - Extract, repurpose, or adapt the Toolkit content for use outside
+     of Claude Code environments
+
+4. INTELLECTUAL PROPERTY
+   The Toolkit, including all skill files, reference documents, templates,
+   guides, scripts, and supporting materials, is the intellectual property
+   of Able Varghese (Tharayil). This copyright applies to the original
+   content, structure, organization, and methodology embodied in the Toolkit.
+
+5. TEAM LICENSE
+   A team license grants the same individual license terms (Sections 1-4)
+   to each authorized team member, up to the number of seats purchased.
+   Each team member is bound by these terms individually. The team license
+   does not grant organization-wide or site-wide use beyond the named seats.
+
+6. UPDATES
+   The Licensee is entitled to receive product updates at no additional
+   cost for a period of twelve (12) months from the date of purchase.
+   After this period, continued access to updates may require a renewal
+   or new purchase at the Author's discretion.
+
+7. NO WARRANTY
+   THE TOOLKIT IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED. THE AUTHOR SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM
+   THE USE OF THIS PRODUCT.
+
+8. TERMINATION
+   This license terminates automatically if the Licensee violates any of
+   the above terms. Upon termination, the Licensee must destroy all copies
+   of the Toolkit in their possession.
+
+9. GOVERNING LAW
+   This license is governed by the laws of the Province of Ontario, Canada.
+
+For licensing inquiries: ablevtinchy@gmail.com

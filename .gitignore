@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Claude Code session artifacts
+.claude/
+
+# Development/evaluation workspace (not part of distributed plugin)
+skills/ios-toolkit-workspace/
+
+# Local plugin settings
+*.local.md
+
+# Archives
+*.zip
+
+# Internal sales/marketing docs (not distributed with product)
+gumroad/
