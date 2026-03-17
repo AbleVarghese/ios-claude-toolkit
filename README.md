@@ -6,16 +6,6 @@ Built from 75+ sessions of production iOS development. Every skill encodes real 
 
 ---
 
-## What's New in v2.0
-
-- **Behavioral Enforcement**: Every skill now has Iron Laws, phase gates, hard stops, self-audit protocols, and counter-based escalation
-- **22 Skills** (up from 21): Added `solve` — Structured Decision Engineering framework
-- **44 Reference Files** (up from 10): Deep-dive content via progressive disclosure
-- **Benchmarked**: 100% behavioral pass rate with skill vs 71.2% without (+28.8% gap)
-- **Plugin Format**: Proper Claude Code plugin with validated `plugin.json`
-
----
-
 ## What's Included
 
 ### Development & Code Quality
@@ -186,7 +176,7 @@ Skills compose naturally. Asking "implement this feature, review it, then commit
 
 ## Behavioral Enforcement
 
-What makes v2.0 different: every skill has **behavioral enforcement** that measurably changes Claude's output.
+Every skill has **behavioral enforcement** that measurably changes Claude's output.
 
 | Mechanism | What It Does | Example |
 |-----------|-------------|---------|
@@ -194,20 +184,8 @@ What makes v2.0 different: every skill has **behavioral enforcement** that measu
 | **Phase Gates** | Block progress without proof | "Cannot proceed to GREEN until test fails in RED" |
 | **Hard Stops** | Block dangerous operations | "Force push to main is BLOCKED — no path to compliance" |
 | **Counter Escalation** | Track attempts, escalate at 3 | "Fix #3 failed — question the architecture" |
-| **Rationalizations** | Pre-built pushback | "I'll add tests later" → "Later never comes" |
+| **Rationalizations** | Pre-built pushback | "I'll add tests later" -> "Later never comes" |
 | **Self-Audit** | Model checks own work | "Did I follow the Iron Law? Cite evidence." |
-
-### Benchmark Results
-
-Tested across 4 iterations, 102+ test cases, 12 dimensions:
-
-| Metric | Score |
-|--------|-------|
-| Behavioral pass rate (with skill) | **100%** |
-| Behavioral pass rate (without skill) | 71.2% |
-| Behavioral improvement gap | **+28.8%** |
-| Challenge resistance (pushback on shortcuts) | **9.3/10** |
-| Overall average across all dimensions | **8.9/10** |
 
 ---
 
@@ -246,9 +224,6 @@ Absolutely. Create a new directory in `.claude/skills/` with a `SKILL.md` file i
 **What if two skills conflict?**
 Skills are additive. In rare cases where two skills give contradictory guidance, Claude follows the more specific one. Each skill has a "When NOT to Use" section to prevent misapplication.
 
-**How is v2.0 different from v1.0?**
-v2.0 adds behavioral enforcement (phase gates, hard stops, self-audit) that v1.0 lacked. Benchmarks show +28.8% behavioral improvement. Plus 33 new reference files and the `solve` decision engineering skill.
-
 **What if Claude ignores a skill?**
 Check the skill's description in `SKILL.md` frontmatter. Skills with pushy, intent-based descriptions trigger more reliably than keyword-only ones.
 
@@ -257,9 +232,10 @@ Check the skill's description in `SKILL.md` frontmatter. Skills with pushy, inte
 ## License
 
 Copyright (c) 2025-2026 Able Varghese (Tharayil). All rights reserved.
-Toronto, Canada.
 
-This product is proprietary intellectual property. Licensed to the original purchaser for use solely as a Claude Code development tool or artifact. Redistribution, reselling, sharing, sublicensing, or inclusion in other products is strictly prohibited. One purchase covers one developer, unlimited projects within Claude Code.
+**Personal License**: One purchase covers one individual developer for personal projects within Claude Code. Company, organizational, and commercial use is prohibited. Redistribution, reselling, sharing, sublicensing, or public publication is strictly prohibited.
+
+**Corporate License**: Available separately. Each employee or contractor requires their own independent license seat. Contact for pricing.
 
 See `LICENSE` for full terms.
 
@@ -267,6 +243,6 @@ See `LICENSE` for full terms.
 
 ## Support
 
-Questions or issues: ablevtinchy@gmail.com
+Questions or issues? See `LICENSE` for contact information.
 
 Built for iOS developers who ship.

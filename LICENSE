@@ -1,6 +1,6 @@
-iOS Claude Code Toolkit — Proprietary License
+iOS Claude Code Toolkit — Personal Use License
 
-Copyright (c) 2025-2026 Able Varghese (Family: Tharayil)
+Copyright (c) 2025-2026 Able Varghese (Tharayil)
 Toronto, Ontario, Canada
 All rights reserved.
 
@@ -8,60 +8,101 @@ TERMS OF USE
 
 1. GRANT OF LICENSE
    This product is licensed, not sold. The original purchaser ("Licensee")
-   is granted a non-exclusive, non-transferable, personal license to use
-   the contents of this product ("the Toolkit") solely as a development
-   tool or artifact within Claude Code (Anthropic's CLI for Claude) based
-   development workflows.
+   is granted a non-exclusive, non-transferable, revocable license to use
+   the contents of this product ("the Toolkit") strictly for PERSONAL USE
+   by the Licensee as an individual developer.
+
+   One purchase grants one license to one individual developer for use on
+   personal projects only.
 
 2. PERMITTED USES
-   - Use the Toolkit solely as a development tool or artifact within
-     Claude Code (Anthropic's CLI for Claude) based development workflows
-   - Modify skill files to suit project-specific needs within Claude Code
-   - Include modified skill files in private repositories for use with
-     Claude Code
+   - Use the Toolkit as a personal development tool within Claude Code
+     (Anthropic's CLI for Claude)
+   - Modify skill files to suit your personal project needs
+   - Include modified skill files in private repositories for your own
+     personal use with Claude Code
 
 3. RESTRICTIONS
    The Licensee may NOT:
-   - Use the Toolkit for any purpose other than Claude Code based
-     software development
-   - Redistribute, share, or make the Toolkit available to others
-   - Resell, sublicense, or include the Toolkit in other products for sale
-   - Publish the Toolkit contents publicly (e.g., public GitHub repos, blogs)
-   - Remove or alter this copyright notice from any files
+   - Use the Toolkit for ANY company, employer, organization, agency,
+     or business entity — personal developer use only
+   - Use the Toolkit in any corporate, commercial, enterprise, or
+     organizational capacity
+   - Redistribute, share, give away, or make the Toolkit available to
+     any other person or entity by any means
+   - Resell, exchange, trade, sublicense, rent, lease, or transfer the
+     Toolkit or any rights granted under this license
+   - Publish the Toolkit contents publicly (e.g., public repositories,
+     blogs, forums, social media, file-sharing platforms)
+   - Include the Toolkit or any portion of it in another product,
+     service, bundle, or collection for sale or distribution
+   - Remove or alter this copyright notice or license from any files
    - Claim authorship of the original Toolkit content
    - Use the Toolkit to create a competing product or development tool
+   - Share access credentials, downloads, or copies with coworkers,
+     team members, friends, or any third party
    - Extract, repurpose, or adapt the Toolkit content for use outside
      of Claude Code environments
 
 4. INTELLECTUAL PROPERTY
    The Toolkit, including all skill files, reference documents, templates,
-   guides, scripts, and supporting materials, is the intellectual property
-   of Able Varghese (Tharayil). This copyright applies to the original
-   content, structure, organization, and methodology embodied in the Toolkit.
+   guides, scripts, and supporting materials, is the sole intellectual
+   property of Able Varghese (Tharayil). This copyright applies to the
+   original content, structure, organization, methodology, enforcement
+   mechanisms, and all creative expression embodied in the Toolkit.
 
-5. TEAM LICENSE
-   A team license grants the same individual license terms (Sections 1-4)
-   to each authorized team member, up to the number of seats purchased.
-   Each team member is bound by these terms individually. The team license
-   does not grant organization-wide or site-wide use beyond the named seats.
+   All rights not expressly granted in this license are reserved by the
+   copyright holder.
 
-6. UPDATES
-   The Licensee is entitled to receive product updates at no additional
-   cost for a period of twelve (12) months from the date of purchase.
-   After this period, continued access to updates may require a renewal
-   or new purchase at the Author's discretion.
+5. CORPORATE / TEAM LICENSE
+   Use of the Toolkit within a company, organization, or team requires a
+   separate Corporate License, purchased independently from the Personal
+   License. The Corporate License grants use rights under the following
+   additional terms:
 
-7. NO WARRANTY
+   a) Each individual employee or contractor who uses the Toolkit must
+      hold their own independent license seat. A Corporate License
+      purchase specifies the number of authorized seats.
+
+   b) Corporate use is limited to the specific employees or contractors
+      named or enumerated at the time of purchase. Adding users requires
+      purchasing additional seats.
+
+   c) A Corporate License does NOT grant organization-wide, site-wide,
+      or unlimited use. It covers only the number of seats purchased.
+
+   d) Each seat holder is individually bound by Sections 2, 3, and 4
+      of this license. The corporate entity is jointly responsible for
+      ensuring compliance by all seat holders.
+
+   e) Corporate Licenses must be purchased directly from the copyright
+      holder. A Personal License cannot be upgraded or converted to a
+      Corporate License — a separate purchase is required.
+
+   f) Using the Toolkit in a corporate environment without a valid
+      Corporate License is a violation of this license and subject to
+      Section 7 (Termination).
+
+   For Corporate License pricing and terms: ablevtinchy@gmail.com
+
+6. NO WARRANTY
    THE TOOLKIT IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS
-   OR IMPLIED. THE AUTHOR SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM
-   THE USE OF THIS PRODUCT.
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. THE AUTHOR
+   SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+   CONSEQUENTIAL, OR EXEMPLARY DAMAGES ARISING FROM THE USE OF OR
+   INABILITY TO USE THIS PRODUCT.
 
-8. TERMINATION
-   This license terminates automatically if the Licensee violates any of
-   the above terms. Upon termination, the Licensee must destroy all copies
-   of the Toolkit in their possession.
+7. TERMINATION
+   This license terminates automatically and immediately if the Licensee
+   violates any of the above terms. Upon termination, the Licensee must
+   destroy all copies of the Toolkit in their possession and certify
+   such destruction upon request.
 
-9. GOVERNING LAW
-   This license is governed by the laws of the Province of Ontario, Canada.
+8. GOVERNING LAW
+   This license is governed by and construed in accordance with the laws
+   of the Province of Ontario, Canada. Any disputes arising from this
+   license shall be subject to the exclusive jurisdiction of the courts
+   of Ontario, Canada.
 
 For licensing inquiries: ablevtinchy@gmail.com

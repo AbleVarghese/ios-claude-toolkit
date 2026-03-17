@@ -5,6 +5,6 @@
   "author": {
     "name": "Able Varghese"
   },
-  "license": "PROPRIETARY",
+  "license": "SEE LICENSE",
   "keywords": ["ios", "swift", "swiftui", "tdd", "security", "performance", "accessibility", "stripe", "supabase", "sentry", "fastlane", "ci-cd"]
 }
