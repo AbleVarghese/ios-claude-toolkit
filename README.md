@@ -4,6 +4,10 @@
 
 Built from 75+ sessions of production iOS development. Every skill encodes real SOPs, checklists, decision trees, and enforcement mechanisms — not generic prompts.
 
+> Built by [Able Varghese](https://github.com/AbleVarghese) — extracted from the agentic engineering
+> system behind a [10-platform portfolio](https://github.com/AbleVarghese). Free and open source (MIT).
+> **If these skills level up your iOS workflow, a ⭐ helps other iOS developers find them.**
+
 ---
 
 ## What's Included
