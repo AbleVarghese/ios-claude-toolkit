@@ -1,0 +1,6 @@
+# Orca repository configuration
+scripts:
+  setup: |
+    echo "✓ Ready"
+
+baseRef: main
